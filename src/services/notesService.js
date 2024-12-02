@@ -3,8 +3,6 @@ import { Permission, Role, ID, Query } from "appwrite";
 
 const databaseId = process.env.REACT_APP_APPWRITE_DATABASE_ID;
 const collectionId = process.env.REACT_APP_APPWRITE_COLLECTION_ID;
-console.log("Database ID:", process.env.REACT_APP_APPWRITE_DATABASE_ID);
-console.log("Collection ID:", process.env.REACT_APP_APPWRITE_COLLECTION_ID);
 
 const generateUserId = () => {
   return localStorage.getItem("userId") || (() => {
