@@ -31,7 +31,7 @@ const NoteForm = ({ onAdd }) => {
 
   return (
     <form
-      className="bg-white p-4 shadow-lg rounded-lg flex items-center space-x-4"
+      className="bg-white p-4 shadow-lg rounded-lg flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0"
       onSubmit={handleSubmit}
     >
       <div className="flex-1">
@@ -86,12 +86,14 @@ const NoteForm = ({ onAdd }) => {
         />
       </div>
 
-      <button
-        type="submit"
-        className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        Add Note
-      </button>
+      <div>
+        <button
+          type="submit"
+          className="px-6 py-2 mt-5 bg-blue-500 text-white rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Add Note
+        </button>
+      </div>
     </form>
   );
 };

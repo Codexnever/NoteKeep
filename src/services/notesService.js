@@ -20,10 +20,8 @@ export const addNote = async (note) => {
       throw new Error("Note title and body are required to create a note.");
     }
 
-    // Ad the userId to the note object
     const noteWithUserId = { ...note, userId };
 
-    // Create the note document in Appwrite
     const response = await databases.createDocument(
       databaseId,
       collectionId,
